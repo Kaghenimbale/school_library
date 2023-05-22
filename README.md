@@ -52,8 +52,6 @@
 
 This project has not been deployed yet
 
-<!-- - [Live Demo Link](<replace-with-your-deployment-URL>) -->
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -125,14 +123,6 @@ Example command:
 ### Deployment
 
 This project has not been deployed yet.
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
