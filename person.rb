@@ -14,4 +14,25 @@ class Person
     def age
         @age
     end
+    def name=(value)
+        @name = value
+    end
+    def age=(value)
+        @age = value
+    end
+
+    def can_use_services?
+        if of_age || @parent_permission
+            return true
+        end
+    end
+
+    private
+    def of_age?
+        if @age >= 18
+            true
+        else
+            false
+        end
+    end
 end
