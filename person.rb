@@ -12,7 +12,7 @@ class Person < Nameable
     @rentals = []
   end
 
-  attr_accessor :name, :age
+  attr_accessor :name, :age, :rentals
   attr_reader :id, :rental
 
   def can_use_services?
@@ -25,8 +25,8 @@ class Person < Nameable
     @name
   end
 
-  def add_rental(rental)
-    @rentals.push(rental)
+  def add_rental(book, date)
+    Rental.new(book, date, self)
   end
 
   private
