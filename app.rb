@@ -119,12 +119,3 @@ class App
         end
     end
 end
-
-app = App.new
-app.add_person
-# app.list_person
-app.create_book
-# app.list_book
-
-app.create_rental
-app.list_rentals
