@@ -12,8 +12,8 @@ class Person < Nameable
     @rentals = []
   end
 
-  attr_accessor :age, :name, :parent_permission
-  attr_reader :id, :rental
+  attr_accessor :age, :name
+  attr_reader :id, :rentals, :parent_permission
 
   def can_use_services?
     return unless of_age? || @parent_permission

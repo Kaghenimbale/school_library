@@ -1,5 +1,7 @@
 require "./student"
 require "./teacher"
+require "./book"
+require "./rental"
 
 class App
     def initialize
@@ -9,11 +11,11 @@ class App
     end
 
     def list_book
-        @books.each { |book| book}
+        @books.each { |book| puts "Title : #{book[1].title}, Author : #{book[1].author}"}
     end
 
     def list_person
-        @people.each { |people| puts people}
+        @people.each { |people| puts "#{[people[0]]} Name: #{people[1].name}, ID : #{people[1].id}, Age : #{people[1].age}"}
     end
 
     def add_student
@@ -26,9 +28,7 @@ class App
 
         student = Student.new(age, name, parent_permission)
 
-        @people.push({"student": student})
-
-        puts "Person created successfully"
+        @people.push(["student", student])
     end
 
     def add_teacher
@@ -41,13 +41,68 @@ class App
 
         teacher = Teacher.new(age, specialization, name)
 
-        @people.push({"teacher": teacher})
+        @people.push(["teacher", teacher])
+    end
 
-        puts "Person created successfully"
+    def create_book
+        puts "Title:"
+        title = gets.chomp
+        puts "Author:"
+        author = gets.chomp
+
+        book = Book.new(title, author)
+
+        @books.push(["book", book])
+        puts "Book created successfully!!"
+    end
+
+    def add_person
+        puts "Do you want to create a student (1), or a teacher (2)? [Input the number]:"
+        person = gets.chomp
+
+        if (person == '1')
+            add_student
+            puts "Person created successfully!!"
+        elsif (person == '2')
+            add_teacher
+            puts "Person created successfully!!"
+        else
+            puts "Incorrect value"
+        end
+    end
+
+    def create_rental
+        puts "Select a book from the following list by number"
+
+        @books.each_with_index do |book, index|
+            puts "#{index}) Title : #{book[1].title}, Author : #{book[1].author}"
+        end
+
+        book_number = gets.chomp
+
+        book = @books[book_number.to_i][1]
+
+        puts "Select a person from the following list by number (not by id)"
+
+        @people.each_with_index do |people, index|
+            puts "#{index} #{[people[0]]} Name: #{people[1].name}, ID : #{people[1].id}, Age : #{people[1].age}"
+        end
+
+        person_number = gets.chomp
+
+        person = @people[person_number.to_i][1]
+
+        puts "Date :" 
+        date = gets.chomp
+
+        Rental.new(date, book, person)
     end
 end
 
 app = App.new
-app.add_student
-app.add_teacher
-app.list_person
+app.add_person
+# app.list_person
+app.create_book
+# app.list_book
+
+app.create_rental
