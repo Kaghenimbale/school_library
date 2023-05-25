@@ -96,6 +96,8 @@ class App
         date = gets.chomp
 
         Rental.new(date, book, person)
+
+        puts "Rental created successfully"
     end
 end
 
