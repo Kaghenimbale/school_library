@@ -52,15 +52,11 @@
 
 This project has not been deployed yet
 
-<!-- - [Live Demo Link](<replace-with-your-deployment-URL>) -->
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
@@ -72,7 +68,7 @@ In order to run this project you need:
 Example command:
 
 ```sh
- gem install rails
+  sudo apt install ruby-full
 ```
  -->
 
@@ -94,53 +90,35 @@ Install this project with:
 Example command:
 
 ```sh
-  cd my-project
-  gem install
+  cd school_library
+  bundle install
 ```
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
-  rails server
+  ruby main.rb
 ```
---->
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
 ```sh
   bin/rails test test/models/article_test.rb
 ```
---->
 
 ### Deployment
 
 This project has not been deployed yet.
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
-> Mention all of the collaborators of this project.
 
 👤 **Kagheni Mbale Christian**
 
@@ -154,8 +132,6 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
 - [ ] **[Add schemas to the project]**
 - [ ] **[Add screenshot to provide details about the project]**
 
@@ -167,7 +143,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Kaghenimbale/school_library/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -194,27 +170,3 @@ Thank you Microverse and my friend who always explain me for preparing this proj
 This project is [MIT](https://github.com/Kaghenimbale/school_library/blob/main/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### [RuboCop](https://docs.rubocop.org/en/stable/)
-
-1. Add this line to the `Gemfile`
-   ```
-   gem 'rubocop', '>= 1.0', '< 2.0'
-   ```
-   _not sure how to use Gemfile? Read [this](https://bundler.io/v1.15/guides/bundler_setup.html)._
-2. Run `bundle install`.
-3. Copy [.rubocop.yml](./.rubocop.yml) to the root directory of your project
-4. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-   - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-5. Run `rubocop`.
-6. Fix linter errors.
-7. **IMPORTANT NOTE**: feel free to research [auto-correct options for Rubocop](https://rubocop.readthedocs.io/en/latest/auto_correct/) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
-
-## Troubleshooting
-
-- While using Colorize gem, if you are facing errors with Rspec related to
-  ```bash
-  LoadError:
-  cannot load such file -- colorize
-  ```
-  please remove `--deployment` from line no. [26](https://github.com/shubham14p3/Ruby-capstone-project/blob/ca86784cc88bea7c933e329c0953f07e21bcf6ca/.github/workflows/tests.yml#L16) of test.yml file.
