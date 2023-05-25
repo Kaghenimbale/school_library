@@ -31,7 +31,7 @@ class Main
   def menu_choice(menu)
     menu_actions = {
       1 => :list_book,
-      2 => :list_people,
+      2 => :list_person,
       3 => :add_person,
       4 => :create_book,
       5 => :create_rental,
