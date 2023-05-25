@@ -120,8 +120,6 @@ This project has not been deployed yet.
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Kagheni Mbale Christian**
 
 - GitHub: [@githubhandle](https://github.com/Kaghenimbale)
@@ -133,8 +131,6 @@ This project has not been deployed yet.
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[Add schemas to the project]**
 - [ ] **[Add screenshot to provide details about the project]**
