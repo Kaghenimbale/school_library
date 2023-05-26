@@ -113,7 +113,7 @@ class App
     puts 'Rentals:'
 
     @rentals.each do |data|
-      if id.to_i == data[:person].id
+      if id == data[:person].id
         puts "Date: #{data[:date]}, Book #{data[:book].title} by #{data[:book].author}"
       else
         puts ' '
