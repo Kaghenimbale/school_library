@@ -1,21 +1,6 @@
 require './app'
 
-class Main
-  attr_reader :app
-
-  def initialize(app)
-    @app = app
-  end
-
-  def main
-    loop do
-      display_menu
-      menu = gets.chomp.to_i
-      menu_choice(menu)
-      break if menu == 7
-    end
-  end
-
+class DisplayMenu
   def display_menu
     puts 'Please choose an option by enterin a number:'
 
@@ -26,6 +11,12 @@ class Main
     puts '5 - Create a rental'
     puts '6 - List all the rental for a given person id'
     puts '7 - Exit'
+  end
+end
+
+class MenuChoice
+  def initialize(app)
+    @app = app
   end
 
   def menu_choice(menu)
@@ -49,6 +40,25 @@ class Main
       end
     else
       puts 'Invalid choice. Please try again.'
+    end
+  end
+end
+
+class Main
+  attr_reader :app
+
+  def initialize(app)
+    @app = app
+    @display_menu = DisplayMenu.new
+    @menu_choice = MenuChoice.new(@app)
+  end
+
+  def main
+    loop do
+      @display_menu.display_menu
+      menu = gets.chomp.to_i
+      @menu_choice.menu_choice(menu)
+      break if menu == 7
     end
   end
 end
