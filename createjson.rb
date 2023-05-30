@@ -39,21 +39,20 @@ class CreateJsonPeople
 end
 
 class CreateJsonRental
-    def initialize(app)
-        @app = app
-    end
+  def initialize(app)
+    @app = app
+  end
 
-    def create_file
-        my_rental = {}
-        rentals = []
-        @app.rentals.each do |rental|
-            single_rental = { Date: rental[:date], Title: rental[:book].title, Author: rental[:book].author }
-            rentals.push(single_rental)
-        end
-        my_rental = { Rental: rentals }.to_json
-        open('rental.json', 'a' ) do |file|
-            file.puts my_rental
-        end 
-
+  def create_file
+    my_rental = {}
+    rentals = []
+    @app.rentals.each do |rental|
+      single_rental = { Date: rental[:date], Title: rental[:book].title, Author: rental[:book].author }
+      rentals.push(single_rental)
     end
+    my_rental = { Rental: rentals }.to_json
+    open('rental.json', 'a') do |file|
+      file.puts my_rental
+    end
+  end
 end
