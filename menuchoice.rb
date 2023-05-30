@@ -1,3 +1,5 @@
+require './createJson'
+
 class MenuChoice
   def initialize(app)
     @app = app
@@ -17,6 +19,9 @@ class MenuChoice
     action = menu_actions[menu]
     if action
       if action == :exit
+        book = CreateJsonBook.new(@app)
+
+        book.create_file
         puts 'Thank you for using this app!'
         exit
       else

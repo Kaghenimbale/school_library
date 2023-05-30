@@ -4,6 +4,7 @@ require './book'
 require './rental'
 
 class App
+  attr_reader :books
   def initialize
     @books = []
     @rentals = []
