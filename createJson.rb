@@ -19,3 +19,23 @@ class CreateJsonBook
 
     end
 end
+
+class CreateJsonPeople
+    def initialize(app)
+        @app = app
+    end
+
+    def create_file
+        my_person = {}
+        persons = []
+        @app.people.each do |people|
+            single_person = { Person: people[0], Name: people[1].name, ID: people[1].id, Age: people[1].age }
+            persons.push(single_person)
+        end
+        my_person = { Person: persons }.to_json
+        open('people.json', 'a' ) do |file|
+            file.puts my_person
+        end 
+
+    end
+end

@@ -20,8 +20,12 @@ class MenuChoice
     if action
       if action == :exit
         book = CreateJsonBook.new(@app)
+        person = CreateJsonPeople.new(@app)
+        rental = CreateJsonRental.new(@app)
 
         book.create_file
+        person.create_file
+        rental.create_file
         puts 'Thank you for using this app!'
         exit
       else
