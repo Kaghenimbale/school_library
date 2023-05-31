@@ -114,6 +114,12 @@ To run tests, run the following command:
 - Twitter: [@twitterhandle](https://twitter.com/MbaleKagheni)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kagheni-mbale-401b90240/)
 
+👤 **Akpan Daniel**
+
+- GitHub: [@danutibe07](https://github.com/danutibe07)
+- Twitter: [@danutibe07](https://twitter.com/Danielutibe07?t=2kvKPTZQ7IGCw2FugE9xCQ&s=09)
+- LinkedIn: [@danutibe07](https://www.linkedin.com/in/akpan-daniel-785888215/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
