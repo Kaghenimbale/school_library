@@ -1,3 +1,5 @@
+require_relative './nameable'
+
 class BaseDecator < Nameable
   def initialize(nameable)
     super()
