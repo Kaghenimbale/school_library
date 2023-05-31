@@ -1,6 +1,6 @@
 require_relative '../trimmerdecorator'
 require_relative '../person'
-require_relative '../nameable'
+require '../basedecator'
 
 describe 'TrimmerDecorator  class' do
   person = Person.new(30, 'micronauts student')
@@ -9,9 +9,9 @@ describe 'TrimmerDecorator  class' do
   it 'takes parameter and return a TrimmerDecorator class ' do
     expect(trimmer).to be_instance_of(TrimmerDecorator)
   end
-#   it 'should have attributes' do
-#     expect(trimmer).to have_attributes(Nameable: person)
-#   end
+  it 'should have attributes' do
+    expect(trimmer).to have_attributes(nameable: person)
+  end
 
   it 'the methods should work' do
     puts
