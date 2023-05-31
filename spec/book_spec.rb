@@ -8,9 +8,8 @@ describe 'unit tests for book class' do
       expect(book).to be_instance_of(Book)
     end
     it 'should have attributes' do
-      expect(book).to have_attributes(title: "Talking Shoes")
-      expect(book).to have_attributes(author: "Peugeon Brothers")
+      expect(book).to have_attributes(title: 'Talking Shoes')
+      expect(book).to have_attributes(author: 'Peugeon Brothers')
     end
   end
-
 end

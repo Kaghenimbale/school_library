@@ -9,7 +9,7 @@ describe 'CapitalizeDecorator  class' do
   it 'takes parameter and return a CapitalizeDecorator class ' do
     expect(capitalize).to be_instance_of(CapitalizeDecorator)
   end
-  
+
   it 'the methods should work' do
     puts
     expect(capitalize.correct_name).to eql('Micronauts')

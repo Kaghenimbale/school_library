@@ -3,7 +3,7 @@ require_relative '../teacher'
 
 describe 'test teacher class' do
   context 'instance of Teacher' do
-    teacher = Teacher.new(27, 'Rails' , 'Chris')
+    teacher = Teacher.new(27, 'Rails', 'Chris')
 
     it 'takes two parameters and returns a Teacher object' do
       expect(teacher).to be_instance_of(Teacher)

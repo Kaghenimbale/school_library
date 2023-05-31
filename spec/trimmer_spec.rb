@@ -9,7 +9,7 @@ describe 'TrimmerDecorator  class' do
   it 'takes parameter and return a TrimmerDecorator class ' do
     expect(trimmer).to be_instance_of(TrimmerDecorator)
   end
-  
+
   it 'the methods should work' do
     puts
     expect(trimmer.correct_name).to eql('micronauts')
