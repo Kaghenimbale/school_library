@@ -1,6 +1,5 @@
 require_relative '../book'
 
-
 describe 'unit tests for book class' do
   context 'have an instance of Book' do
     book = Book.new('Talking Shoes', 'Peugeon Brothers')
