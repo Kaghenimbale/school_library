@@ -1,3 +1,6 @@
+require './createjson'
+
+
 class MenuChoice
   MENU_ACTIONS = {
     1 => :list_book,
@@ -36,8 +39,8 @@ class MenuChoice
   end
 
   def create_json_files
-    CreateJsonBook.new(@app).create_file
-    CreateJsonPeople.new(@app).create_file
-    CreateJsonRental.new(@app).create_file
+    book = CreateJsonBook.new(@app).create_file
+    people = CreateJsonPeople.new(@app).create_file
+    rental = CreateJsonRental.new(@app).create_file
   end
 end
