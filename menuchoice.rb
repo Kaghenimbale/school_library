@@ -1,3 +1,5 @@
+require './createjson'
+
 class MenuChoice
   MENU_ACTIONS = {
     1 => :list_book,
